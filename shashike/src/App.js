@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {fetchClientIp} from './services/GetIP'
+import {handleNewVisit} from './services/Visitor'
 
 class App extends Component {
   state = {
@@ -42,7 +43,7 @@ class App extends Component {
     let platform = this.state.platform
     let languages = this.state.languages
     if (ip && user && platform && languages) {
-      console.log(this.state)
+      handleNewVisit(ip, 'location undefined', user, languages, platform)
     }
   }
   render() {
