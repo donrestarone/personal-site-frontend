@@ -5,6 +5,8 @@ import {BrowserView,MobileView,isBrowser,isMobile} from "react-device-detect";
 import NavBar from './components/NavBar/NavBar'
 import SideBar from './components/SideBar/SideBar'
 import Aux from './components/HOC/Aux'
+import Footer from './components/Footer/Footer'
+
 class App extends Component {
   state = {
     ipAddress: null,
@@ -55,13 +57,14 @@ class App extends Component {
       return (
         <Aux>
           <NavBar></NavBar>
+          <Footer></Footer>
         </Aux>
         
       )
     } else {
       const style = {
         display: 'grid',
-        gridTemplateColumns: '0.5fr 4.5fr',
+        gridTemplateColumns: '0.1fr 4.5fr',
         gridTemplateRows: '1fr',
         gridTemplateAreas: ". ."
       }
@@ -72,10 +75,9 @@ class App extends Component {
               <SideBar></SideBar>
             </div>
             <div>
-              rest of the stuff here
+              <Footer isMobile></Footer>
             </div>
           </div>
-          
         </Aux>
       )
     }
