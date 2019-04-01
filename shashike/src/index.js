@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-
 // bootstrap
 import $ from 'jquery';
 import Popper from 'popper.js';
