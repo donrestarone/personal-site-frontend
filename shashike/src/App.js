@@ -9,6 +9,8 @@ import Aux from './components/HOC/Aux'
 import Footer from './components/Footer/Footer'
 import IntroductionSplash from './components/Containers/IntroductionSplash'
 
+
+
 class App extends Component {
   state = {
     ipAddress: null,
