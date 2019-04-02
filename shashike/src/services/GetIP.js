@@ -6,10 +6,10 @@ export const fetchClientIp = () => {
     })
     .then(e => {
       if (e.ok) {
-        console.log(e)
+        // console.log(e)
         resolve(e)
       } else {
-        console.log(e)
+        // console.log(e)
         reject(e)
       }
     }).catch(e => console.log('error::', e))

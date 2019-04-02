@@ -57,6 +57,9 @@ class App extends Component {
     let languages = this.state.languages
     if (ip && user && platform && languages) {
       handleNewVisit(ip, 'location undefined', user, languages, platform)
+      .then(response => response.json()).then(object => {
+        // send to redux store
+      })
     }
   }
 
