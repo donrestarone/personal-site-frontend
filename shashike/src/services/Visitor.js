@@ -9,6 +9,7 @@ export const handleNewVisit = (ipAddress, location, userAgent, languages, platfo
       headers: {
         'Content-Type': 'application/json',
         'Accept': 'application/json',
+        'secret': process.env.REACT_APP_API_SECRET
       },
       body: JSON.stringify({
         ip_address: ipAddress,

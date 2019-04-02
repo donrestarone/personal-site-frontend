@@ -58,6 +58,7 @@ class App extends Component {
     if (ip && user && platform && languages) {
       handleNewVisit(ip, 'location undefined', user, languages, platform)
       .then(response => response.json()).then(object => {
+        console.log(object)
         // send to redux store
       })
     }
