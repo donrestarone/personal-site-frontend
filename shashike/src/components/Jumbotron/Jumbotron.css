@@ -5,15 +5,16 @@
 }
 
 .jumbo-heading {
-  padding-top: 40%;
+  padding-top: 35vh;
   margin: auto;
   font-family: 'Pacifico', cursive;
-  font-size: 4em;
+  font-size: 6em;
   color: #9ADC6D;
 }
 
 .jumbo-text {
   font-family: 'Cookie', cursive;
-  font-size: 2em;
+  font-size: 3em;
   color: #9ADC6D;
+  margin: 0;
 }
