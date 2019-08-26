@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './Animate.css'
+import './App.css'
+import {BrowserRouter, Route, Switch} from 'react-router-dom'
 import {fetchClientIp} from './services/GetIP'
 import {handleNewVisit} from './services/Visitor'
 import {BrowserView,MobileView,isBrowser,isMobile} from "react-device-detect";
@@ -8,7 +10,7 @@ import SideBar from './components/SideBar/SideBar'
 import Aux from './components/HOC/Aux'
 import Footer from './components/Footer/Footer'
 import IntroductionSplash from './components/Containers/IntroductionSplash'
-
+import Welcome from './components/Containers/Welcome/Welcome'
 
 
 class App extends Component {
@@ -17,7 +19,7 @@ class App extends Component {
     userAgent: null,
     platform: null,
     languages: null,
-    showSplash: true
+    showSplash: true,
   }
 
   initializeUserDetails = () => {
@@ -58,41 +60,25 @@ class App extends Component {
     if (ip && user && platform && languages) {
       handleNewVisit(ip, 'location undefined', user, languages, platform)
       .then(response => response.json()).then(object => {
-        console.log(object)
-        // send to redux store
+        // send to redux store and/or sessionstorage in case the user refreshes the page
       })
     }
   }
 
   renderInterface = () => {
-    if (isBrowser) {
-      return (
-        <Aux>
-          <NavBar></NavBar>
-          <Footer></Footer>
-        </Aux>
-        
-      )
-    } else {
-      const style = {
-        display: 'grid',
-        gridTemplateColumns: '0.1fr 4.5fr',
-        gridTemplateRows: '1fr',
-        gridTemplateAreas: ". ."
-      }
-      return (
-        <Aux isMobile>
-          <div style={style}>
-            <div>
-              <SideBar></SideBar>
-            </div>
-            <div>
-              <Footer isMobile></Footer>
-            </div>
-          </div>
-        </Aux>
-      )
-    }
+
+    return (
+        <BrowserRouter>
+          <Switch>
+          <Aux>
+            <NavBar></NavBar>
+            <Route exact path='/' render={(props) => <Welcome /> }/>
+            {/* <Footer></Footer> */}
+          </Aux>
+          </Switch>
+      </BrowserRouter>
+      
+    )
   }
 
   timeOutAnimation = () => {
