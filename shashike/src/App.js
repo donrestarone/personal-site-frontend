@@ -11,8 +11,8 @@ import Aux from './components/HOC/Aux'
 import Footer from './components/Footer/Footer'
 import IntroductionSplash from './components/Containers/IntroductionSplash'
 import Welcome from './components/Containers/Welcome/Welcome'
-
-
+import ProfessionalProjects from './components/Containers/ProfessionalProjects/ProfessionalProjects'
+import PersonalProjects from './components/Containers/PersonalProjects/PersonalProjects'
 class App extends Component {
   state = {
     ipAddress: null,
@@ -73,7 +73,8 @@ class App extends Component {
           <Aux>
             <NavBar></NavBar>
             <Route exact path='/' render={(props) => <Welcome /> }/>
-            {/* <Footer></Footer> */}
+            <Route exact path='/professional-projects' render={(props) => <ProfessionalProjects /> }/>
+            <Route exact path='/personal-projects' render={(props) => <PersonalProjects /> }/>
           </Aux>
           </Switch>
       </BrowserRouter>
