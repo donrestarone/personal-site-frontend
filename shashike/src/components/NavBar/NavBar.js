@@ -6,7 +6,7 @@ class NavBar extends Component {
     return (
       <div className="navbar">
         <Link className="navbar-title" to="/">Shashike J</Link>
-        <button className="contact-button">Contact</button>
+        <button className="contact-button" onClick={this.props.contactToggler}>Contact</button>
       </div>
     );
   }
