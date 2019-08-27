@@ -1,0 +1,53 @@
+.project-link {
+  text-decoration: none; 
+  color: white;
+  cursor: pointer;
+  border: 2px solid white;
+}
+
+.project-link:hover {
+  font-size: 40px;
+  transition: 0.5s ease-in-out;
+  font-style: italic;
+}
+@media only screen and (min-width: 501px) {
+  /* desktop */
+  .project-list-item-wrapper {
+    width: 40%;
+    margin: 10px;
+  }
+
+  .project-hero-image {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .description-wrapper {
+    margin: 20px;
+  }
+
+  .project-link {
+    font-size: 30px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  /* mobile */
+
+  .project-list-item-wrapper {
+    width: 90vw;
+  }
+
+  .project-hero-image {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .project-description {
+    max-width: 100%;
+  }
+
+  .project-link {
+    font-size: 30px;
+  }
+}
