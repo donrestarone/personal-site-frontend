@@ -4,7 +4,7 @@
 
 .professional-projects-container {
   display: flex; 
-  justify-content: space-around;
+  justify-content: start;
   flex-wrap: wrap;
 }
 
