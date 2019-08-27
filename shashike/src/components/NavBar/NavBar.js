@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+import {Link} from 'react-router-dom'
 import './NavBar.css'
 class NavBar extends Component {
   render() {
     return (
       <div className="navbar">
-        <h1 className="navbar-title">Shashike J</h1>
+        <Link className="navbar-title" to="/">Shashike J</Link>
         <button className="contact-button">Contact</button>
       </div>
     );
