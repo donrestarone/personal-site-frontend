@@ -4,7 +4,6 @@ import './App.css'
 import {BrowserRouter, Route, Switch} from 'react-router-dom'
 import {fetchClientIp} from './services/GetIP'
 import {handleNewVisit} from './services/Visitor'
-import {BrowserView,MobileView,isBrowser,isMobile} from "react-device-detect";
 import NavBar from './components/NavBar/NavBar'
 import SideBar from './components/SideBar/SideBar'
 import Aux from './components/HOC/Aux'
@@ -13,6 +12,8 @@ import IntroductionSplash from './components/Containers/IntroductionSplash'
 import Welcome from './components/Containers/Welcome/Welcome'
 import ProfessionalProjects from './components/Containers/ProfessionalProjects/ProfessionalProjects'
 import PersonalProjects from './components/Containers/PersonalProjects/PersonalProjects'
+import ProfessionalProject from './components/Containers/ProfessionalProject/ProfessionalProject'
+import ContactModal from './components/Containers/ContactModal/ContactModal'
 class App extends Component {
   state = {
     ipAddress: null,
@@ -20,6 +21,13 @@ class App extends Component {
     platform: null,
     languages: null,
     showSplash: true,
+    showContact: false,
+  }
+
+  contactToggler = () => {
+    this.setState(prevState => ({
+      showContact: !prevState.showContact
+    }))
   }
 
   initializeUserDetails = () => {
@@ -65,16 +73,27 @@ class App extends Component {
     }
   }
 
+  showContactModal = () => {
+    let showContactModal = this.state.showContact
+    if (showContactModal) {
+      return (
+        <ContactModal contactToggler={this.contactToggler}></ContactModal>
+      )
+    }
+  }
+
   renderInterface = () => {
 
     return (
         <BrowserRouter>
           <Switch>
           <Aux>
-            <NavBar></NavBar>
+            <NavBar contactToggler={this.contactToggler}></NavBar>
+            {this.showContactModal()}
             <Route exact path='/' render={(props) => <Welcome /> }/>
             <Route exact path='/professional-projects' render={(props) => <ProfessionalProjects /> }/>
             <Route exact path='/personal-projects' render={(props) => <PersonalProjects /> }/>
+            <Route exact path='/professional-projects/:id' component={ProfessionalProject}/>
           </Aux>
           </Switch>
       </BrowserRouter>
