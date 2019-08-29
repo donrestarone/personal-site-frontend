@@ -12,13 +12,8 @@
   text-align: right;
 }
 
-.contact-modal-wrapper {
-  border: 5px white solid;
-  z-index: 100;
-  height: 90vh;
-  width: 99vw;
-  position: fixed;
-  background-color: black;
+.contact-footer {
+  text-align: center;
 }
 
 .contact-submit-button-wrapper {
@@ -31,8 +26,24 @@
   cursor: pointer;
 }
 
+.contact-footer-link {
+  text-decoration: none; 
+  cursor: pointer;
+  color: white;
+}
+
 @media only screen and (min-width: 501px) {
   /* desktop */
+
+  .contact-modal-wrapper {
+    border: 5px white solid;
+    z-index: 100;
+    height: 90vh;
+    width: 99vw;
+    position: fixed;
+    background-color: black;
+  }
+
   .contact-details {
     padding: 80px;
   }
@@ -56,9 +67,63 @@
   .close-button {
     font-size: 50px;
   }
+
+  .contact-footer-link {
+    width: 30px;
+    height: 50px;
+    font-size: 25px;
+    padding: 30px;
+  }
 }
 
 @media only screen and (max-width: 500px) {
   /* mobile */
 
+  .contact-modal-wrapper {
+    z-index: 100;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    background-color: black;
+  }
+
+  .contact-details {
+    padding: 15px;
+  }
+
+  .contact-input-field {
+    height: 35px;
+    width: 45%;
+    font-size: 16px;
+  }
+
+  .contact-input-area {
+    width: 91%;
+    height: 175px;
+    font-size: 16px;
+  }
+
+  .contact-submit-button-wrapper {
+    padding: 15px;
+  }
+
+  .close-button {
+    /* padding 0 on top and bottom 8 px left and right */
+    padding: 0 8px;
+    font-size: 18px;
+    margin: 15px;
+  }
+
+  .contact-footer-link {
+    font-size: 16px;
+    padding: 8px;
+  }
+
+  .contact-footer {
+    padding: 30px 0;
+  }
+
+  .contact-button {
+    font-size: 16px;
+  }
 }
