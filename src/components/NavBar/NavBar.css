@@ -1,0 +1,77 @@
+.contact-button {
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  border: none;
+}
+
+.contact-button:hover { 
+  background-color: black;
+  transition: 0.5s ease-in-out;
+  color: #E9E6E6;
+  cursor: pointer;
+  border: 5px solid white;
+}
+
+.navbar-title:hover {
+  background-color: black;
+  transition: 0.5s ease-in-out;
+  color: #E9E6E6;
+  cursor: pointer;
+}
+
+.navbar {
+  display: flex; 
+  justify-content: space-between;
+  color: white;
+}
+
+.navbar-title {
+  text-decoration: none;
+  color: white;
+}
+
+.navbar-title:visited {
+  text-decoration: none;
+  color: white;
+}
+
+@media only screen and (min-width: 501px) {
+  /* desktop */
+  .navbar {
+    font-size: 18px;
+    padding: 20px 30px;
+  }
+  
+  .contact-button {
+    font-size: 18px;
+    align-self: center;
+    height: 50px;
+  }
+  
+  .navbar-title {
+    align-self: center;
+    font-size: 25px;
+    font-weight: bold;
+    border-bottom: 3px solid white;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  /* mobile */
+  .navbar {
+    font-size: 10px;
+    padding: 10px 15px;
+  }
+  
+  .navbar button {
+    font-size: 12px;
+  }
+
+  .navbar-title {
+    align-self: center;
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom: 2px solid white;
+  }
+}
