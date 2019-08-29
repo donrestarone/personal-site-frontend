@@ -9,8 +9,8 @@ const PersonalProject = (props) => {
         <p className="personal-project-description">{project.description}</p>
       </div>
       <div className="personal-project-link-wrapper">
-        <a className="personal-project-link" rel="noreferrer" target="_blank" href="https://clone-hackernews.herokuapp.com">Live Site</a>
-        <a className="personal-project-link" rel="noreferrer" target="_blank" href="https://github.com/donrestarone/hackernews-clone">Source Code</a>
+        <a className="personal-project-link" rel="noreferrer" target="_blank" href={project.projectLink}>Live Site</a>
+        <a className="personal-project-link" rel="noreferrer" target="_blank" href={project.githubLink}>Source Code</a>
       </div>
     </div>
   )
