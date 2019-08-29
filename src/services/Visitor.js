@@ -1,9 +1,9 @@
 const localRoot = 'http://localhost:4000'
-const productionRoot = null
+const productionRoot = 'https://shashike-j.herokuapp.com'
 
 export const handleNewVisit = (ipAddress, location, userAgent, languages, platform) => {
   return new Promise((resolve, reject) => {
-    let endpoint = localRoot + '/api/v1/visitors'
+    let endpoint = productionRoot + '/api/v1/visitors'
     fetch( endpoint, {
       method: 'POST',
       headers: {
