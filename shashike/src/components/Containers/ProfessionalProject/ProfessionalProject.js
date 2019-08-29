@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {professionalProjects} from '../../../Constants/ProfessionalProjectsData'
 import {Link} from 'react-router-dom'
 import './ProfessionalProject.css'
+import Demo from '../../Project/Demo/Demo'
 class ProfessionalProject extends Component {
   state = {
     project: null,
@@ -36,23 +37,7 @@ class ProfessionalProject extends Component {
   showDemo = () => {
     let project = this.readProject()
     if (project) {
-      return project.media.map((asset, index) => {
-        if (asset.type === 'video') {
-          return (
-            <div className="video-demo">
-              <video className="video-column" src={asset.link} autoPlay muted="" playsinline="" controls loop/>
-              <p>{asset.caption}</p>
-            </div>
-          )
-        } else {
-          return (
-            <div className="picture-demo">
-              <img className="picture-column" src={asset.link}></img>
-              <p>{asset.caption}</p>
-            </div>
-          )
-        }
-      })
+      return <Demo project={project}></Demo>
     }
   }
 
