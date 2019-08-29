@@ -1,0 +1,36 @@
+.heading-wrapper {
+  color: white;
+}
+
+.professional-projects-container {
+  display: flex; 
+  justify-content: start;
+  flex-wrap: wrap;
+}
+
+.professional-heading {
+  text-decoration: underline;
+}
+
+@media only screen and (min-width: 501px) {
+  /* desktop */
+  .professional-heading {
+    font-size: 40px;
+  }
+
+  .professional-projects-container-wrapper {
+    padding: 30px;
+  }
+
+}
+
+@media only screen and (max-width: 500px) {
+  /* mobile */
+  .professional-heading {
+    font-size: 30px;
+  }
+
+  .professional-projects-container-wrapper {
+    padding: 15px;
+  }
+}

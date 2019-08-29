@@ -1,0 +1,47 @@
+.personal-project-link-wrapper {
+  text-align: center;
+}
+
+.personal-project-link {
+  text-decoration: none; 
+  color: white; 
+  border: 1px solid white;
+}
+
+.personal-project-heading {
+  font-style: italic;
+}
+
+@media only screen and (min-width: 501px) {
+  /* desktop */
+  .personal-project-wrapper {
+    padding: 30px;
+  }
+
+  .personal-project-link-wrapper {
+    padding: 30px 0;
+  }
+
+  .personal-project-link {
+    padding: 10px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  /* mobile */
+  .personal-project-wrapper {
+    padding: 15px;
+  }
+
+  .personal-project-description {
+    font-size: 16px;
+  }
+
+  .personal-project-link-wrapper {
+    padding: 30px 0;
+  }
+
+  .personal-project-link {
+    padding: 10px;
+  }
+}
