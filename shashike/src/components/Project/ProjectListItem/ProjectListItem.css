@@ -2,14 +2,19 @@
   text-decoration: none; 
   color: white;
   cursor: pointer;
-  border: 2px solid white;
+  /* box-shadow: 2px 2px 1px 1px white; */
+  border-bottom: 2px solid white;
+  font-style: italic;
 }
 
 .project-link:hover {
   font-size: 40px;
   transition: 0.5s ease-in-out;
   font-style: italic;
+  border: 1px solid white;
 }
+
+
 @media only screen and (min-width: 501px) {
   /* desktop */
   .project-list-item-wrapper {
@@ -36,6 +41,12 @@
 
   .project-list-item-wrapper {
     width: 90vw;
+    padding: 40px 0;
+  }
+
+  .project-list-item-wrapper:not(:first-of-type) {
+    /* all project-list-item-wrappers except the first */
+    border-top: 1px solid white;
   }
 
   .project-hero-image {
