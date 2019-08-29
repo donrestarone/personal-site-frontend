@@ -1,23 +1,33 @@
 import React, { Component } from 'react';
 import './Animate.css'
+import './App.css'
+import {BrowserRouter, Route, Switch} from 'react-router-dom'
 import {fetchClientIp} from './services/GetIP'
 import {handleNewVisit} from './services/Visitor'
-import {BrowserView,MobileView,isBrowser,isMobile} from "react-device-detect";
 import NavBar from './components/NavBar/NavBar'
 import SideBar from './components/SideBar/SideBar'
 import Aux from './components/HOC/Aux'
 import Footer from './components/Footer/Footer'
 import IntroductionSplash from './components/Containers/IntroductionSplash'
-
-
-
+import Welcome from './components/Containers/Welcome/Welcome'
+import ProfessionalProjects from './components/Containers/ProfessionalProjects/ProfessionalProjects'
+import PersonalProjects from './components/Containers/PersonalProjects/PersonalProjects'
+import ProfessionalProject from './components/Containers/ProfessionalProject/ProfessionalProject'
+import ContactModal from './components/Containers/ContactModal/ContactModal'
 class App extends Component {
   state = {
     ipAddress: null,
     userAgent: null,
     platform: null,
     languages: null,
-    showSplash: true
+    showSplash: true,
+    showContact: false,
+  }
+
+  contactToggler = () => {
+    this.setState(prevState => ({
+      showContact: !prevState.showContact
+    }))
   }
 
   initializeUserDetails = () => {
@@ -58,41 +68,37 @@ class App extends Component {
     if (ip && user && platform && languages) {
       handleNewVisit(ip, 'location undefined', user, languages, platform)
       .then(response => response.json()).then(object => {
-        console.log(object)
-        // send to redux store
+        // send to redux store and/or sessionstorage in case the user refreshes the page
       })
     }
   }
 
-  renderInterface = () => {
-    if (isBrowser) {
+  showContactModal = () => {
+    let showContactModal = this.state.showContact
+    if (showContactModal) {
       return (
-        <Aux>
-          <NavBar></NavBar>
-          <Footer></Footer>
-        </Aux>
-        
-      )
-    } else {
-      const style = {
-        display: 'grid',
-        gridTemplateColumns: '0.1fr 4.5fr',
-        gridTemplateRows: '1fr',
-        gridTemplateAreas: ". ."
-      }
-      return (
-        <Aux isMobile>
-          <div style={style}>
-            <div>
-              <SideBar></SideBar>
-            </div>
-            <div>
-              <Footer isMobile></Footer>
-            </div>
-          </div>
-        </Aux>
+        <ContactModal contactToggler={this.contactToggler}></ContactModal>
       )
     }
+  }
+
+  renderInterface = () => {
+
+    return (
+        <BrowserRouter>
+          <Switch>
+          <Aux>
+            <NavBar contactToggler={this.contactToggler}></NavBar>
+            {this.showContactModal()}
+            <Route exact path='/' render={(props) => <Welcome /> }/>
+            <Route exact path='/professional-projects' render={(props) => <ProfessionalProjects /> }/>
+            <Route exact path='/personal-projects' render={(props) => <PersonalProjects /> }/>
+            <Route exact path='/professional-projects/:id' component={ProfessionalProject}/>
+          </Aux>
+          </Switch>
+      </BrowserRouter>
+      
+    )
   }
 
   timeOutAnimation = () => {
