@@ -3,10 +3,22 @@ import './ProjectListItem.css'
 import {Link} from 'react-router-dom'
 const ProjectListItem = (props) => {
   let project = props.project
+  const showHeroAsset = () => {
+    if (project.heroAssetType === 'video') {
+      return (
+        <video src={project.heroAsset} autoPlay muted="" playsinline="" controls loop className="project-hero-image"/>
+      )
+    } else {
+      return (
+        <img className="project-hero-image" src={project.heroAsset}/>
+      )
+    }
+    
+  }
   return (
     <div className="project-list-item-wrapper">
       <div className="project-hero-image-wrapper">
-        <video src={project.heroImage} autoPlay muted="" playsinline="" controls loop className="project-hero-image"/>
+        {showHeroAsset()}
       </div>
       <div className="description-wrapper">
         <Link to={project.path} className="project-link">{project.title}</Link>
