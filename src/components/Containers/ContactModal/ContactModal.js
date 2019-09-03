@@ -18,7 +18,7 @@ class ContactModal extends Component {
       <div className="contact-submit-button-wrapper">
         <button className="contact-button">Submit</button>
       </div>
-
+      <p>This is still under construction, please contact me on LinkedIn!</p>
       <div className="contact-footer">
         <a href="https://github.com/donrestarone" className="contact-footer-link" rel="noreferrer" target="_blank">Github</a>
         <a href="https://www.linkedin.com/in/shashike-jayatunge/" className="contact-footer-link" rel="noreferrer" target="_blank">LinkedIn</a>
