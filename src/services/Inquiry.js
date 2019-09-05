@@ -1,8 +1,8 @@
 import {getApiRoot} from './Api'
 
-export const handleNewVisit = (ipAddress, location, userAgent, languages, platform) => {
+export const createInquiry = (name, email, message) => {
   return new Promise((resolve, reject) => {
-    let endpoint = getApiRoot() + '/api/v1/visitors'
+    let endpoint = getApiRoot() + '/api/v1/inquiries'
     fetch( endpoint, {
       method: 'POST',
       headers: {
@@ -11,11 +11,9 @@ export const handleNewVisit = (ipAddress, location, userAgent, languages, platfo
         'secret': process.env.REACT_APP_API_SECRET
       },
       body: JSON.stringify({
-        ip_address: ipAddress,
-        location: location,
-        user_agent: userAgent, 
-        languages: languages,
-        platform: platform
+        name: name,
+        email: email,
+        message: message, 
       })
     })
     .then(e => {
