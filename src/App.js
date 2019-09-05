@@ -12,7 +12,7 @@ import IntroductionSplash from './components/Containers/IntroductionSplash'
 import Welcome from './components/Containers/Welcome/Welcome'
 import ProfessionalProjects from './components/Containers/ProfessionalProjects/ProfessionalProjects'
 import PersonalProjects from './components/Containers/PersonalProjects/PersonalProjects'
-import ProfessionalProject from './components/Containers/ProfessionalProject/ProfessionalProject'
+import Project from './components/Containers/Project/Project'
 import ContactModal from './components/Containers/ContactModal/ContactModal'
 class App extends Component {
   state = {
@@ -93,7 +93,8 @@ class App extends Component {
             <Route exact path='/' render={(props) => <Welcome /> }/>
             <Route exact path='/professional-projects' render={(props) => <ProfessionalProjects /> }/>
             <Route exact path='/personal-projects' render={(props) => <PersonalProjects /> }/>
-            <Route exact path='/professional-projects/:id' component={ProfessionalProject}/>
+            <Route exact path='/professional-projects/:id' component={Project}/>
+            <Route exact path='/personal-projects/:id' component={Project}/>
           </Aux>
           </Switch>
       </BrowserRouter>
@@ -111,7 +112,7 @@ class App extends Component {
   renderApp = () => {
     let showSplash = this.state.showSplash
     this.timeOutAnimation()
-    if (showSplash) {
+    if (false) {
       return (
         <IntroductionSplash></IntroductionSplash>
       )
