@@ -11,7 +11,12 @@ const PersonalProjects = (props) => {
     })
   }
   return (
-   showPersonalProjects()
+    <div className="animated fadeInUpBig professional-projects-container-wrapper">
+      <div className="heading-wrapper"><h1 className="professional-heading">Personal Projects</h1></div>
+      <div className="professional-projects-container">
+        {showPersonalProjects()}
+      </div>
+    </div>
   )
 }
 
