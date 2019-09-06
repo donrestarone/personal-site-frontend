@@ -13,7 +13,18 @@ const ProjectListItem = (props) => {
         <img className="project-hero-image" src={project.heroAsset}/>
       )
     }
-    
+  }
+
+  const showLinkToSourceCode = () => {
+    if (project.hasSource) {
+      return <a target="_blank" rel="noopener noreferrer" href={project.sourceLink}>Source Code</a>
+    }
+  }
+
+  const linkToLiveSite = () => {
+    if (project.hasLiveSite) {
+      return <a target="_blank" rel="noopener noreferrer" href={project.liveSite}>Live Site</a>
+    }
   }
   return (
     <div className="project-list-item-wrapper">
@@ -23,6 +34,8 @@ const ProjectListItem = (props) => {
       <div className="description-wrapper">
         <Link to={project.path} className="project-link">{project.title}</Link>
         <p className="project-description">{project.mainCaption}</p>
+        {showLinkToSourceCode()}
+        {linkToLiveSite()}
       </div>
     </div>
   )
