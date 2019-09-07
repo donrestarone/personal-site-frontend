@@ -30,6 +30,12 @@ class App extends Component {
     }))
   }
 
+  closeContactModal = () => {
+    this.setState({
+      showContact: false
+    })
+  }
+
   initializeUserDetails = () => {
     let userAgent = `${window.navigator.vendor} ${window.navigator.userAgent}`
     let platform = `${window.navigator.platform}`
@@ -88,7 +94,7 @@ class App extends Component {
         <BrowserRouter>
           <Switch>
           <Aux>
-            <NavBar contactToggler={this.contactToggler}></NavBar>
+            <NavBar contactToggler={this.contactToggler} closeContactModal={this.closeContactModal}></NavBar>
             {this.showContactModal()}
             <Route exact path='/' render={(props) => <Welcome /> }/>
             <Route exact path='/professional-projects' render={(props) => <ProfessionalProjects /> }/>
