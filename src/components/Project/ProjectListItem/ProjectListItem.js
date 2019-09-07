@@ -17,22 +17,24 @@ const ProjectListItem = (props) => {
 
   const showLinkToSourceCode = () => {
     if (project.hasSource) {
-      return <a target="_blank" rel="noopener noreferrer" href={project.sourceLink}>Source Code</a>
+      return <a target="_blank" className="extra-link" rel="noopener noreferrer" href={project.sourceLink}>Source Code</a>
     }
   }
 
   const linkToLiveSite = () => {
     if (project.hasLiveSite) {
-      return <a target="_blank" rel="noopener noreferrer" href={project.liveSite}>Live Site</a>
+      return <a target="_blank" className="extra-link" rel="noopener noreferrer" href={project.liveSite}>Live Site</a>
     }
   }
+
+  const link = {pathname: project.path, state: {fallback: props.fallback}}
   return (
     <div className="project-list-item-wrapper">
       <div className="project-hero-image-wrapper">
         {showHeroAsset()}
       </div>
       <div className="description-wrapper">
-        <Link to={project.path} className="project-link">{project.title}</Link>
+        <Link to={link} className="project-link">{project.title}</Link>
         <p className="project-description">{project.mainCaption}</p>
         {showLinkToSourceCode()}
         {linkToLiveSite()}

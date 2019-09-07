@@ -126,4 +126,42 @@ export const professionalProjects = [
      },
     ]
   },
+  {
+    title: 'Sanjay Singhal',
+    mainCaption: "Sanjay Singhal, a prominent Canadian venture capitalist & angel investor's personal website",
+    heroAsset: 'https://shashike-portfolio-site-assets.s3.amazonaws.com/sanjay-website.mov',
+    heroAssetType: 'video',
+    hasLiveSite: true, 
+    liveSite: 'https://www.sanjaysinghal.com',
+    features: [
+      '3 responsive breakpoints: desktop, mobile & tablet with custom CSS',
+      'Single page application',
+      'Assets hosted on CDN',
+      'Custom domain & SSL certificate',
+    ],
+    implementation: [
+      'React.js',
+      'Amazon Web Services',
+      'Godaddy DNS',
+    ],
+    path: '/professional-projects/sanjay-singhal',
+    id: 'sanjay-singhal',
+    media: [
+     {
+      link: 'https://shashike-portfolio-site-assets.s3.amazonaws.com/sanjay-website.mov',
+      caption: 'Desktop breakpoint with parallax effect',
+      type: 'video'
+     },
+     {
+      link: 'https://shashike-portfolio-site-assets.s3.amazonaws.com/sanjay-website-mobile.mov',
+      caption: "Mobile breakpoint, introduces a sidebar with a hamburger collapse",
+      type: 'video'
+     },
+     {
+      link: 'https://shashike-portfolio-site-assets.s3.amazonaws.com/sanjay-website-ipad.mov',
+      caption: "Tablet breakpoint, similar to desktop. No parallax, larger images slightly different layout.",
+      type: 'video'
+     },
+    ]
+  },
 ]

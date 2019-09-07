@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {professionalProjects} from '../../../Constants/ProfessionalProjectsData'
+import {personalProjects} from '../../../Constants/PersonalProjectsData'
 import {Link} from 'react-router-dom'
 import './ProfessionalProject.css'
 import Demo from '../../Project/Demo/Demo'
@@ -72,7 +73,8 @@ class ProfessionalProject extends Component {
   }
   setProjectState = () => {
     let projectId = this.props.match.params.id
-    let project = professionalProjects.filter(project => project.id === projectId)[0]
+    let projects = professionalProjects.concat(personalProjects)
+    let project = projects.filter(project => project.id === projectId)[0]
     this.setState({project})
   }
 
@@ -98,9 +100,10 @@ class ProfessionalProject extends Component {
     )
   }
   render() {
+    let link = this.props.location.state.fallback
     return (
     <div className="show-professional-project-wrapper">
-      <Link to="/professional-projects" className="professional-projects-back-button">&#9756;</Link>
+      <Link to={link} className="professional-projects-back-button">&#9756;</Link>
       <div><h1>{this.showProjectName()}</h1></div>
       {this.renderInterface()}
     </div>
