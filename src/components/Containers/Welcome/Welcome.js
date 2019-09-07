@@ -6,7 +6,7 @@ import {Link} from 'react-router-dom'
 class Welcome extends Component {
   render() {
     return (
-      <div className="project-type-wrapper" ref={welcomeContainer => {this.welcomeContainer = welcomeContainer}} >
+      <div className="project-type-wrapper animated zoomIn" ref={welcomeContainer => {this.welcomeContainer = welcomeContainer}} >
         <div className="professional-projects-wrapper">
           <Link to="/professional-projects" className="projects-gateway">Professional Projects</Link>
         </div>
