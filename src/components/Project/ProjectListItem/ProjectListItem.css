@@ -17,6 +17,8 @@
 .extra-link {
   text-decoration: none; 
   color: white;
+  font-weight: bold;
+  font-style: italic;
 }
 
 
