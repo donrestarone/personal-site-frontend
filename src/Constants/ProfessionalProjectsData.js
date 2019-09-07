@@ -52,7 +52,12 @@ export const professionalProjects = [
       link: 'https://shashike-portfolio-site-assets.s3.amazonaws.com/labour-panel-desktop.png',
       caption: "Seamlessly assign user roles and permissions so data stays compartmentalized",
       type: 'image'
-     }
+     },
+     {
+      link: 'https://shashike-portfolio-site-assets.s3.amazonaws.com/Screen+Shot+2019-09-06+at+6.32.52+PM.png',
+      caption: "Real time analytics dashboard shows the performance of the venue as well as staff",
+      type: 'image'
+     },
     ]
   },
   {
