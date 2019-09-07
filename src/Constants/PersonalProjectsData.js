@@ -67,13 +67,13 @@ export const personalProjects = [
     hasLiveSite: true, 
     features: [
       'Real time streaming chat',
-      'Show how many people are connected to the room',
+      'At any given time, show how many people are connected to the room',
       'Custom CSS',
       'Anonymized chat rooms',
       'Dark mode'
     ],
     implementation: [
-      'Rails 5 API with Redis & ActionCable websocket',
+      'Rails 5 API with Redis, ActiveJob, & ActionCable websocket',
       'React frontend with Redux',
     ],
     path: '/personal-projects/railroad',
