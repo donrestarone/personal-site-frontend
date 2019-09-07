@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import {professionalProjects} from '../../../Constants/ProfessionalProjectsData'
 import {personalProjects} from '../../../Constants/PersonalProjectsData'
 import {Link} from 'react-router-dom'
-import './ProfessionalProject.css'
+import './Project.css'
 import Demo from '../../Project/Demo/Demo'
-class ProfessionalProject extends Component {
+class Project extends Component {
   state = {
     project: null,
     chosenTopic: 'Features'
@@ -102,7 +102,7 @@ class ProfessionalProject extends Component {
   render() {
     let link = this.props.location.state.fallback
     return (
-    <div className="show-professional-project-wrapper">
+    <div className="show-professional-project-wrapper animated fadeIn">
       <Link to={link} className="professional-projects-back-button">&#9756;</Link>
       <div><h1>{this.showProjectName()}</h1></div>
       {this.renderInterface()}
@@ -112,4 +112,4 @@ class ProfessionalProject extends Component {
   }
 }
 
-export default ProfessionalProject;
+export default Project;
