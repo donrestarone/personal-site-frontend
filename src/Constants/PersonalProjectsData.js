@@ -60,7 +60,7 @@ export const personalProjects = [
     title: 'RailRoad: Your Secret Messenger',
     liveSite: 'https://rail-room.herokuapp.com/',
     sourceLink: 'https://github.com/donrestarone/rail-room',
-    mainCaption: 'RailRoom is a privacy oriented real time messaging app built with React, Redux and Rails 5 ActionCable. Only users who are given the room link are able to connect, view and send messages.',
+    mainCaption: 'RailRoad is a privacy oriented real time messaging app built with React, Redux and Rails 5 ActionCable. Only users who are given the room link are able to connect, view and send messages.',
     heroAsset: 'https://shashike-portfolio-site-assets.s3.amazonaws.com/railroad.mov',
     heroAssetType: 'video',
     hasSource: true,
