@@ -5,6 +5,7 @@ const Blog = (props) => {
     <>
       <div className="blog-wrapper">
         <h1 className="professional-heading">Blog</h1>
+        <strong>COMING SOON!</strong>
       </div>
     </>
   )
