@@ -5,16 +5,30 @@
 }
 
 .jumbo-heading {
+  font-family: 'Audiowide', cursive;
   padding-top: 30vh;
   margin: auto;
-  font-family: Helvetica, sans-serif;
+  /* font-family: Helvetica, sans-serif; */
   font-size: 6em;
   color: white;
 }
 
 .jumbo-text {
-  font-family: Helvetica, sans-serif;
+  /* font-family: Helvetica, sans-serif; */
+  font-family: 'Audiowide', cursive;
   font-size: 3em;
   color: white;
   margin: 0;
+}
+
+
+@media only screen and (max-width: 500px) {
+  /* mobile */
+  .jumbo-heading {
+    font-size: 4em;
+  }
+  
+  .jumbo-text {
+    font-size: 2em;
+  }
 }

@@ -1,0 +1,19 @@
+@media only screen and (min-width: 501px) {
+  /* desktop */
+  .blog-wrapper {
+    padding: 20px 30px;
+    font-size: 20px;
+    line-height: 28px;
+  }
+  
+}
+
+@media only screen and (max-width: 500px) {
+  /* mobile */
+  .blog-wrapper {
+    padding: 10px 15px;
+    font-size: 16px;
+    line-height: 28px;
+  }
+  
+}

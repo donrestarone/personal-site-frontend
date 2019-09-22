@@ -1,16 +1,19 @@
-.contact-button {
+.nav-button {
   background-color: white;
   color: black;
   font-weight: bold;
   border: none;
+  text-decoration: none;
+  text-align: center;
+  font-family: 'Audiowide', cursive;
 }
 
-.contact-button:hover { 
+.nav-button:hover { 
   background-color: black;
   transition: 0.5s ease-in-out;
   color: #E9E6E6;
   cursor: pointer;
-  border: 5px solid white;
+  border: 3px solid white;
 }
 
 .navbar-title:hover {
@@ -26,9 +29,15 @@
   color: white;
 }
 
+.nav-buttons-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
 .navbar-title {
   text-decoration: none;
   color: white;
+  font-family: 'Audiowide', cursive;
 }
 
 .navbar-title:visited {
@@ -43,10 +52,12 @@
     padding: 20px 30px;
   }
   
-  .contact-button {
+  .nav-button {
     font-size: 18px;
-    align-self: center;
     height: 50px;
+    margin: 10px;
+    line-height: 46px;
+    padding: 0;
   }
   
   .navbar-title {
@@ -64,8 +75,31 @@
     padding: 10px 15px;
   }
   
-  .navbar button {
+  .nav-button {
     font-size: 12px;
+    line-height: 20px;
+    margin: 2px;
+    padding: 0;
+  }
+
+  .navbar-title {
+    align-self: center;
+    font-size: 16px;
+    font-weight: bold;
+    border-bottom: 2px solid white;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  /* SMALL SCREEN mobile */
+  .navbar {
+    font-size: 8px;
+    padding: 10px 15px;
+  }
+  
+  .navbar button {
+    font-size: 10px;
+    margin: 2px;
   }
 
   .navbar-title {

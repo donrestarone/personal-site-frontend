@@ -14,6 +14,8 @@ import ProfessionalProjects from './components/Containers/ProfessionalProjects/P
 import PersonalProjects from './components/Containers/PersonalProjects/PersonalProjects'
 import Project from './components/Containers/Project/Project'
 import ContactModal from './components/Containers/ContactModal/ContactModal'
+import Blog from './components/Containers/Blog/Blog'
+import AboutMe from './components/Containers/AboutMe/AboutMe'
 class App extends Component {
   state = {
     ipAddress: null,
@@ -101,6 +103,8 @@ class App extends Component {
             <Route exact path='/personal-projects' render={(props) => <PersonalProjects /> }/>
             <Route exact path='/professional-projects/:id' component={Project}/>
             <Route exact path='/personal-projects/:id' component={Project}/>
+            <Route exact path='/about/me' component={AboutMe}/>
+            <Route exact path='/blog' component={Blog}/>
           </Aux>
           </Switch>
       </BrowserRouter>

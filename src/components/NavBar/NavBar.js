@@ -6,7 +6,11 @@ class NavBar extends Component {
     return (
       <div className="navbar">
         <Link className="navbar-title" to="/" onClick={this.props.closeContactModal}>Shashike J</Link>
-        <button className="contact-button" onClick={this.props.contactToggler}>Contact</button>
+          <div className="nav-buttons-wrapper">
+            <button className="nav-button" onClick={this.props.contactToggler}>Contact</button>
+            <Link to="/about/me" className="nav-button" onClick={this.props.closeContactModal}>About Me</Link>
+            <Link to="/blog" className="nav-button" onClick={this.props.closeContactModal}>Blog</Link>
+          </div>
       </div>
     );
   }
