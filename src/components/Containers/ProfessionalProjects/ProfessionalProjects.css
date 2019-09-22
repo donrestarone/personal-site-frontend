@@ -10,6 +10,7 @@
 
 .professional-heading {
   text-decoration: underline;
+  font-family: 'Audiowide', cursive;
 }
 
 @media only screen and (min-width: 501px) {
