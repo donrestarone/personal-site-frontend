@@ -1,9 +1,14 @@
+.about-me-wrapper {
+  font-family: 'Audiowide', cursive;
+}
+
 @media only screen and (min-width: 501px) {
   /* desktop */
   .about-me-wrapper {
     padding: 20px 30px;
     font-size: 20px;
     line-height: 28px;
+    font-family: 'Audiowide', cursive;
   }
   
 }
