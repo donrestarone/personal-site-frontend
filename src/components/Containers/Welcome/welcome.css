@@ -28,6 +28,7 @@
 }
 
 .projects-gateway {
+  font-family: 'Audiowide', cursive;
   text-decoration: none;
   color: white;
 }
@@ -74,7 +75,7 @@
   }
 
   .projects-gateway {
-    font-size: 30px;
+    font-size: 25px;
   }
 
   .divider {
@@ -88,7 +89,7 @@
 @media only screen and (max-width: 320px) {
   /* SMALL SCREEN mobile */
   .project-type-wrapper {
-    font-size: 14px; 
+    font-size: 10px; 
     margin-top: 10%; 
     height: 300px;
   }
