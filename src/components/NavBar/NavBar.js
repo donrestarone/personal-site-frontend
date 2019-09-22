@@ -8,8 +8,8 @@ class NavBar extends Component {
         <Link className="navbar-title" to="/" onClick={this.props.closeContactModal}>Shashike J</Link>
           <div className="nav-buttons-wrapper">
             <button className="nav-button" onClick={this.props.contactToggler}>Contact</button>
-            <Link to="/about/me" className="nav-button">About Me</Link>
-            <Link to="/blog" className="nav-button">Blog</Link>
+            <Link to="/about/me" className="nav-button" onClick={this.props.closeContactModal}>About Me</Link>
+            <Link to="/blog" className="nav-button" onClick={this.props.closeContactModal}>Blog</Link>
           </div>
       </div>
     );
