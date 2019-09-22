@@ -122,7 +122,7 @@ class App extends Component {
   renderApp = () => {
     let showSplash = this.state.showSplash
     this.timeOutAnimation()
-    if (false) {
+    if (showSplash) {
       return (
         <IntroductionSplash></IntroductionSplash>
       )
