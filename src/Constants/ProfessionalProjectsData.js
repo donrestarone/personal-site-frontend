@@ -44,6 +44,11 @@ export const professionalProjects = [
       type: 'video'
      },
      {
+      link: 'https://shashike-portfolio-site-assets.s3.amazonaws.com/silverware-analytics.mov',
+      caption: "SilverwarePOS integration shows POS data aggregated against other data sources. Presents key indicators of labour performance, inventory and sales",
+      type: 'video'
+     },
+     {
       link: 'https://shashike-portfolio-site-assets.s3.amazonaws.com/render1.png',
       caption: "There are multiple ways to login: email & password, PIN or via facial recognition.",
       type: 'image'
