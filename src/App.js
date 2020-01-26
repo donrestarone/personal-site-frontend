@@ -16,7 +16,6 @@ import Project from './components/Containers/Project/Project'
 import ContactModal from './components/Containers/ContactModal/ContactModal'
 import Blog from './components/Containers/Blog/Blog'
 import AboutMe from './components/Containers/AboutMe/AboutMe'
-import BackgroundImage from './assets/welcome-background.png'
 import Projects from './components/Containers/Projects/Projects'
 
 class App extends Component {
@@ -25,7 +24,7 @@ class App extends Component {
     userAgent: null,
     platform: null,
     languages: null,
-    showSplash: true,
+    showSplash: false,
     showContact: false,
   }
 
@@ -94,16 +93,11 @@ class App extends Component {
   }
 
   renderInterface = () => {
-    let style = {
-      background: `url(${BackgroundImage}) no-repeat center center fixed`,
-      backgroundSize: 'cover',
-      height: '100vh',
-    }
     return (
         <BrowserRouter>
           <Switch>
           <Aux>
-            <div style={style}>
+            <div>
               <NavBar contactToggler={this.contactToggler} closeContactModal={this.closeContactModal}></NavBar>
               {this.showContactModal()}
               <Route exact path='/' render={(props) => <Welcome /> }/>
