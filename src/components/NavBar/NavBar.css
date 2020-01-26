@@ -1,3 +1,63 @@
+.navbar {
+  display: grid;
+  grid-template-columns: 30% 70%;
+}
+
+
+.nav-buttons-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: end;
+}
+
+.nav-button, .navbar-title {
+  color: #DCE0D9;
+  font-size: 31px;
+}
+
+.nav-button {
+  text-decoration: none;
+  font-family: 'Oswald', sans-serif;
+  
+}
+
+.navbar-title {
+  text-decoration: none;
+  font-family: 'Oswald', sans-serif;
+}
+
+
+@media only screen and (min-width: 501px) {
+  /* desktop */
+  .navbar {
+    font-size: 18px;
+    padding: 20px 30px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  /* mobile */
+
+}
+
+@media only screen and (max-width: 320px) {
+  /* SMALL SCREEN mobile */
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* OLD STYLES */
+/* 
 .nav-button {
   background-color: white;
   color: black;
@@ -43,11 +103,11 @@
 .navbar-title:visited {
   text-decoration: none;
   color: white;
-}
+} */
 
 @media only screen and (min-width: 501px) {
   /* desktop */
-  .navbar {
+  /* .navbar {
     font-size: 18px;
     padding: 20px 30px;
   }
@@ -65,12 +125,12 @@
     font-size: 25px;
     font-weight: bold;
     border-bottom: 3px solid white;
-  }
+  } */
 }
 
 @media only screen and (max-width: 500px) {
   /* mobile */
-  .navbar {
+  /* .navbar {
     font-size: 10px;
     padding: 10px 15px;
   }
@@ -87,12 +147,12 @@
     font-size: 16px;
     font-weight: bold;
     border-bottom: 2px solid white;
-  }
+  } */
 }
 
 @media only screen and (max-width: 320px) {
   /* SMALL SCREEN mobile */
-  .navbar {
+  /* .navbar {
     font-size: 8px;
     padding: 10px 15px;
   }
@@ -107,5 +167,5 @@
     font-size: 18px;
     font-weight: bold;
     border-bottom: 2px solid white;
-  }
+  } */
 }

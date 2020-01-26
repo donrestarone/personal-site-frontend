@@ -5,11 +5,13 @@ class NavBar extends Component {
   render() {
     return (
       <div className="navbar">
-        <Link className="navbar-title" to="/" onClick={this.props.closeContactModal}>Shashike J</Link>
+        <div className="navbar-home">
+          <Link className="navbar-title" to="/" onClick={this.props.closeContactModal}>Shashike J</Link>
+        </div>
           <div className="nav-buttons-wrapper">
-            <button className="nav-button" onClick={this.props.contactToggler}>Contact</button>
-            <Link to="/about/me" className="nav-button" onClick={this.props.closeContactModal}>About Me</Link>
-            <Link to="/blog" className="nav-button" onClick={this.props.closeContactModal}>Blog</Link>
+            <Link to="/about/me" className="nav-button" onClick={this.props.closeContactModal}>About</Link>
+            <Link to="/projects" className="nav-button" onClick={this.props.closeContactModal}>App Showcase</Link>
+            <Link to="/contact" className="nav-button" onClick={this.props.closeContactModal}>Contact</Link>
           </div>
       </div>
     );
