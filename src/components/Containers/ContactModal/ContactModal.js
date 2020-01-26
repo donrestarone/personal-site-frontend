@@ -32,7 +32,6 @@ class ContactModal extends Component {
       .then(object => {
         if (object.code === 201) {
           // close modal 
-          this.props.contactToggler()
           this.cleanUp()
           alert('your inquiry has been sent!')
         }

@@ -16,6 +16,8 @@ import Project from './components/Containers/Project/Project'
 import ContactModal from './components/Containers/ContactModal/ContactModal'
 import Blog from './components/Containers/Blog/Blog'
 import AboutMe from './components/Containers/AboutMe/AboutMe'
+import Projects from './components/Containers/Projects/Projects'
+
 class App extends Component {
   state = {
     ipAddress: null,
@@ -91,20 +93,23 @@ class App extends Component {
   }
 
   renderInterface = () => {
-
     return (
         <BrowserRouter>
           <Switch>
           <Aux>
-            <NavBar contactToggler={this.contactToggler} closeContactModal={this.closeContactModal}></NavBar>
-            {this.showContactModal()}
-            <Route exact path='/' render={(props) => <Welcome /> }/>
-            <Route exact path='/professional-projects' render={(props) => <ProfessionalProjects /> }/>
-            <Route exact path='/personal-projects' render={(props) => <PersonalProjects /> }/>
-            <Route exact path='/professional-projects/:id' component={Project}/>
-            <Route exact path='/personal-projects/:id' component={Project}/>
-            <Route exact path='/about/me' component={AboutMe}/>
-            <Route exact path='/blog' component={Blog}/>
+            <div>
+              <NavBar contactToggler={this.contactToggler} closeContactModal={this.closeContactModal}></NavBar>
+              {this.showContactModal()}
+              <Route exact path='/' render={(props) => <Welcome /> }/>
+              <Route exact path='/professional-projects' render={(props) => <ProfessionalProjects /> }/>
+              <Route exact path='/personal-projects' render={(props) => <PersonalProjects /> }/>
+              <Route exact path='/projects' render={(props) => <Projects /> }/>
+              <Route exact path='/professional-projects/:id' component={Project}/>
+              <Route exact path='/personal-projects/:id' component={Project}/>
+              <Route exact path='/about/me' component={AboutMe}/>
+              <Route exact path='/blog' component={Blog}/>
+              <Route exact path='/contact' component={ContactModal}/>
+            </div>
           </Aux>
           </Switch>
       </BrowserRouter>
