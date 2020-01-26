@@ -27,7 +27,7 @@ const Aux = (props) => {
   const renderView = () => {
     console.log(props.location.pathname)
     return (
-      <div style={generateBackgroundImageStyle()}>
+      <div style={generateBackgroundImageStyle()} className="animated zoomIn">
         {props.children}          
       </div>
     )
