@@ -26,6 +26,16 @@
   font-family: 'Oswald', sans-serif;
 }
 
+.nav-button:hover { 
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.navbar-title:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 
 @media only screen and (min-width: 501px) {
   /* desktop */

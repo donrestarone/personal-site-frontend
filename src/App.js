@@ -25,7 +25,7 @@ class App extends Component {
     userAgent: null,
     platform: null,
     languages: null,
-    showSplash: false,
+    showSplash: true,
     showContact: false,
   }
 
