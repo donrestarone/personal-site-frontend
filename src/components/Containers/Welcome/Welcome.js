@@ -9,7 +9,7 @@ class Welcome extends Component {
         <div className="intro-text-wrapper">          
           <p className="intro-block-text"> <span className="intro-hi">Hi,</span> I'm <span className="intro-signature">Shashike Jayatunge</span> </p>
           <p className="intro-block-text">Full-stack <span className="intro-dev-text">developer</span> &amp; <span className="intro-hacker-text">hacker</span></p>
-          <p className="intro-block-text-small">If you have an idea for an MVP, let me can bring it to life</p>
+          <p className="intro-block-text-small">From design to deployment, I bring MVP's to life</p>
         </div>
       </div>
     );
