@@ -2,6 +2,7 @@ import React from 'react';
 import {isMobile, isTablet, isBrowser} from 'react-device-detect'
 import MainBackgroundImageDesktop from '../../assets/main-background-desktop.png'
 import MainBackgroundImageMobile from '../../assets/main-background-mobile.png'
+import MainBackgroundImageTablet from '../../assets/main-background-tablet.png'
 
 const Aux = (props) => {
 
@@ -11,8 +12,23 @@ const Aux = (props) => {
       case '/projects':
         return 'black'
       default: 
-        return `url(${ isBrowser ? MainBackgroundImageDesktop : MainBackgroundImageMobile}) no-repeat center center fixed`
+        return selectBackgroundAssetType()
     }
+  }
+
+  const selectBackgroundAssetType = () => {
+    if (isBrowser) {
+      return `url(${MainBackgroundImageDesktop}) no-repeat center center fixed`
+    }
+    
+    if (isTablet) {
+      return `url(${MainBackgroundImageTablet}) no-repeat center center fixed`
+    }
+    
+    if (isMobile) {
+      return `url(${MainBackgroundImageMobile}) no-repeat center center fixed`
+    }
+
   }
 
   const generateBackgroundSettings = () => {
