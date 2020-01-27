@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './Demo.css'
+import Spinner from '../../Spinner/Spinner'
+
 class Demo extends Component {
   state = {
     media: []
@@ -53,7 +55,7 @@ class Demo extends Component {
           }
           return (
             <>
-              <div className="spinner" style={loadingStyle}></div>
+              <Spinner loadingStyle={loadingStyle}></Spinner>
               <div className="picture-demo" style={loadedStyle}>
                 <img className="picture-column" onLoad={ () => { this.handleLoad(asset.link) } } src={asset.link}></img>
                 <p>{asset.caption}</p>
