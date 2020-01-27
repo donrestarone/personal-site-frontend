@@ -41,17 +41,18 @@
 @media only screen and (max-width: 500px) {
   /* mobile */
   .intro-text-wrapper {
-    margin-top: 20vh;
+    margin-top: 25vh;
     margin-left: 20px;
   }
 
   .intro-block-text  {
-    font-size: 32px;
+    font-size: 30px;
     margin: 0;
   }
 
   .intro-block-text-small {
     font-size: 16px;
     margin: 0;
+    align-self: center;
   }
 }
