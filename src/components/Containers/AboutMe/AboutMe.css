@@ -56,6 +56,36 @@
 
 @media only screen and (max-width: 500px) {
   /* mobile */
+  .about-me-content-wrapper {
+    padding: 2%;
+  }
+  .about-me-text-wrapper {
+    text-align: center;
+  }
 
-  
+  .about-me-subheading {
+    font-size: 18px;
+  }
+
+
+  .about-me-image-wrapper {
+    max-height: 35vh;
+    max-width: 37vw;
+    margin: 0 auto;
+  }
+
+  .about-me-image-wrapper > img {
+    max-height: 35vh;
+    max-width: 37vw;
+    align-self: center;
+  }
+
+  .about-me-social-media-wrapper {
+    margin-top: 5vh;
+  }
+
+  .about-me-link {
+    margin: 0 10px;
+    font-size: 16px;
+  }
 }
