@@ -6,7 +6,7 @@ const PersonalProjects = (props) => {
   const showPersonalProjects = () => {
     return personalProjects.map((project, index) => {
       return (
-        <ProjectListItem project={project} key={index} fallback={'/personal-projects'}></ProjectListItem>
+        <ProjectListItem project={project} key={index} fallback={'/projects'}></ProjectListItem>
       )
     })
   }

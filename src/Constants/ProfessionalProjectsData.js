@@ -2,8 +2,8 @@ export const professionalProjects = [
   {
     title: 'ODIN 3',
     mainCaption: 'ODIN is a next generation CRM system designed for the hospitality industry. It integrates with various services such as Slack, Stripe, Sevenrooms, SilverwarePOS and Mailgun to allow venues to cater amazing experiences for their valued guests. It can take care of everything from recognizing repeat customers, marketing campaigns to charging credit cards',
-    heroAsset: 'https://shashike-portfolio-site-assets.s3.amazonaws.com/odin-3-facial-recognition-login.mov',
-    heroAssetType: 'video',
+    heroAsset: 'https://shashike-portfolio-site-assets.s3.amazonaws.com/render1.png',
+    heroAssetType: 'image',
     features: [
       'Facial Recognition for learned faces, allows to recognize guests and allow users to login quickly.',
       'Powerful analytics for generating audiences for marketing purposes',
@@ -49,9 +49,9 @@ export const professionalProjects = [
       type: 'video'
      },
      {
-      link: 'https://shashike-portfolio-site-assets.s3.amazonaws.com/render1.png',
+      link: 'https://shashike-portfolio-site-assets.s3.amazonaws.com/odin-3-facial-recognition-login.mov',
       caption: "There are multiple ways to login: email & password, PIN or via facial recognition.",
-      type: 'image'
+      type: 'video'
      },
      {
       link: 'https://shashike-portfolio-site-assets.s3.amazonaws.com/labour-panel-desktop.png',
@@ -68,8 +68,8 @@ export const professionalProjects = [
   {
     title: 'ECHO 3',
     mainCaption: 'ECHO is a fast text messaging middleware that can integrate with a given CRM system (currently the text messaging handmaiden of ODIN).',
-    heroAsset: 'https://shashike-portfolio-site-assets.s3.amazonaws.com/echo.mov',
-    heroAssetType: 'video',
+    heroAsset: 'https://shashike-portfolio-site-assets.s3.amazonaws.com/echo-messages-desktop-2.png',
+    heroAssetType: 'image',
     features: [
       'Platform agnostic: just expose a queryable endpoint for retrieving phone numbers so when messages are recieved conversations are automatically initialized within ECHO',
       'Low latency',
@@ -87,6 +87,11 @@ export const professionalProjects = [
     path: '/professional-projects/echo',
     id: 'echo',
     media: [
+      {
+       link: 'https://shashike-portfolio-site-assets.s3.amazonaws.com/echo.mov',
+       caption: "The mobile-first design allows Echo's interface to translate well to mobile screens",
+       type: 'video'
+      },
      {
       link: 'https://shashike-portfolio-site-assets.s3.amazonaws.com/Screen+Shot+2019-08-27+at+3.01.53+PM.png',
       caption: 'When new messages come in users are notified via Slack so they can respond right away.',
@@ -101,15 +106,14 @@ export const professionalProjects = [
       link: 'https://shashike-portfolio-site-assets.s3.amazonaws.com/messages-scroll.mov',
       caption: "The performant interface of ECHO allows users to respond quickly to lists of conversations",
       type: 'video'
-     }
-     ,
+     },
     ]
   },
   {
     title: 'OVERSEER',
     mainCaption: "OVERSEER is a native application for leveraging ODIN's powerful facial recognition features by detecting faces in videos and uploading them to the ODIN API for processing.",
-    heroAsset: 'https://shashike-portfolio-site-assets.s3.amazonaws.com/overseer-facial-detection-in-livestream.mov',
-    heroAssetType: 'video',
+    heroAsset: 'https://shashike-portfolio-site-assets.s3.amazonaws.com/overseer-search-desktop.png',
+    heroAssetType: 'image',
     features: [
       'Compatible with any USB camera or RTSP feed',
       'perform client-side facial detection and upload snapshots to the ODIN API for facial recognition processing',
@@ -139,8 +143,8 @@ export const professionalProjects = [
   {
     title: 'Sanjay Singhal',
     mainCaption: "Sanjay Singhal, a prominent Canadian venture capitalist & angel investor's personal website",
-    heroAsset: 'https://shashike-portfolio-site-assets.s3.amazonaws.com/sanjay-website.mov',
-    heroAssetType: 'video',
+    heroAsset: 'https://shashike-portfolio-site-assets.s3.amazonaws.com/Screen+Shot+2020-02-02+at+3.44.27+PM.png',
+    heroAssetType: 'image',
     hasLiveSite: true, 
     liveSite: 'https://www.sanjaysinghal.com',
     features: [
@@ -175,3 +179,4 @@ export const professionalProjects = [
     ]
   },
 ]
+

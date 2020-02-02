@@ -1,6 +1,8 @@
 import React from 'react';
 import './ProjectListItem.css'
 import {Link} from 'react-router-dom'
+import ImageContainer from '../ImageContainer/ImageContainer'
+
 const ProjectListItem = (props) => {
   let project = props.project
   const showHeroAsset = () => {
@@ -9,8 +11,12 @@ const ProjectListItem = (props) => {
         <video src={project.heroAsset} autoPlay muted="" playsinline="" controls loop className="project-hero-image"/>
       )
     } else {
+      let image = {
+        link: project.heroAsset,
+        className: 'project-hero-image'
+      }
       return (
-        <img className="project-hero-image" src={project.heroAsset}/>
+        <ImageContainer className="project-hero-image" image={image}/>
       )
     }
   }
@@ -29,7 +35,7 @@ const ProjectListItem = (props) => {
 
   const link = {pathname: project.path, state: {fallback: props.fallback}}
   return (
-    <div className="project-list-item-wrapper">
+    <Link to={link} style={{textDecoration: 'none'}} className="project-list-item-wrapper">
       <div className="project-hero-image-wrapper">
         {showHeroAsset()}
       </div>
@@ -39,7 +45,7 @@ const ProjectListItem = (props) => {
         {showLinkToSourceCode()}
         {linkToLiveSite()}
       </div>
-    </div>
+    </Link>
   )
 }
 

@@ -5,7 +5,7 @@ import {professionalProjects} from '../../../Constants/ProfessionalProjectsData'
 const ProfessionalProjects = (props) => {
   const showProjects = () => {
     return professionalProjects.map((project, index) => {
-      return <ProjectListItem project={project} key={index} fallback={'/professional-projects'}></ProjectListItem>
+      return <ProjectListItem project={project} key={index} fallback={'/projects'}></ProjectListItem>
     })
   }
 
