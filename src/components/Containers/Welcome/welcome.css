@@ -6,10 +6,12 @@
 
 .intro-signature {
   font-family: 'Marck Script', cursive;
+  color: #80a1c1;
 }
 
 .intro-dev-text {
   color: #818D92;
+  text-shadow: 1px 1px 1px #dce0d9;
 }
 
 .intro-hacker-text {

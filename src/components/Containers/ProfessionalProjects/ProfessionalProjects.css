@@ -4,13 +4,14 @@
 
 .professional-projects-container {
   display: flex; 
-  justify-content: start;
+  justify-content: initial;
   flex-wrap: wrap;
 }
 
 .professional-heading {
   text-decoration: underline;
-  font-family: 'Audiowide', cursive;
+  font-family: 'Oswald', sans-serif;
+  color: #DCE0D9;
 }
 
 @media only screen and (min-width: 501px) {
