@@ -23,13 +23,13 @@ const ProjectListItem = (props) => {
 
   const showLinkToSourceCode = () => {
     if (project.hasSource) {
-      return <a target="_blank" className="extra-link" rel="noopener noreferrer" href={project.sourceLink}>Source Code</a>
+      return <a target="_blank" className="extra-link" rel="noopener noreferrer" href={project.sourceLink} onClick={(e) => {e.stopPropagation()}}>Source Code</a>
     }
   }
 
   const linkToLiveSite = () => {
     if (project.hasLiveSite) {
-      return <a target="_blank" className="extra-link" rel="noopener noreferrer" href={project.liveSite}>Live Site</a>
+      return <a target="_blank" className="extra-link" rel="noopener noreferrer" href={project.liveSite} onClick={(e) => {e.stopPropagation()}}>Live Site</a>
     }
   }
 
