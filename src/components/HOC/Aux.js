@@ -8,11 +8,14 @@ const Aux = (props) => {
 
   const generateBackground = () => {
     let path = props.location.pathname
+    console.log(path)
     switch(path) {
-      case '/projects':
-        return 'black'
-      default: 
+      case '/':
         return selectBackgroundAssetType()
+      case '/about/me':
+        return selectBackgroundAssetType()
+      default: 
+        return 'black'
     }
   }
 
