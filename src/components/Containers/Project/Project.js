@@ -6,11 +6,14 @@ import backButton from '../../../assets/back-button.png'
 import ImageContainer from '../../Project/ImageContainer/ImageContainer'
 import './Project.css'
 import Demo from '../../Project/Demo/Demo'
+import DemoContainer from '../../Project/DemoContainer/DemoContainer'
 
 
 class Project extends Component {
   state = {
     project: null,
+    currentIndex: 0,
+    mediaListMaxIndex: null, 
   }
 
   componentDidMount = () => {
@@ -25,7 +28,7 @@ class Project extends Component {
     let projectId = this.props.match.params.id
     let projects = professionalProjects.concat(personalProjects)
     let project = projects.filter(project => project.id === projectId)[0]
-    this.setState({project})
+    this.setState({project: project, mediaListMaxIndex: project.media.length -1})
   }
 
   renderProjectTitle = () => {
@@ -66,6 +69,18 @@ class Project extends Component {
     }
   }
 
+  incrementMediaListIndex = () => {
+    this.setState((prevState) => ({
+      currentIndex: prevState.mediaListMaxIndex >= prevState.currentIndex + 1 ? prevState.currentIndex + 1 : prevState.mediaListMaxIndex
+    }))
+  }
+
+  decrementMediaListIndex = () => {
+    this.setState((prevState) => ({
+      currentIndex: prevState.currentIndex - 1 === -1 ? 0 : prevState.currentIndex - 1
+    }))
+  }
+
 
   render() {
     let link = this.props.location.state.fallback
@@ -102,6 +117,7 @@ class Project extends Component {
           </ul>
         </div>
       </div>
+      <DemoContainer previous={this.decrementMediaListIndex} next={this.incrementMediaListIndex} media={this.state.project ? this.state.project.media : null} index={this.state.currentIndex}></DemoContainer>
     </div>
     );
   }

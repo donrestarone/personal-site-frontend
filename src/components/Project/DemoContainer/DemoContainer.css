@@ -1,0 +1,37 @@
+.demo-container-wrapper {
+  padding: 0 0 0 112px;
+  text-align: center;
+}
+
+.demo-image {
+  border-radius: 4%;
+  max-width: 50%;
+  height: auto;
+  margin: 20px;
+  flex-grow: 1;
+}
+
+.demo-heading {
+  font-family: Catamaran-SemiBold;
+  font-size: 35px;
+  color: #FFA69E;
+  margin: 0;
+}
+
+.demo-container-controls {
+  filter: invert(1);
+  width: 30px;
+  height: auto;
+  align-self: center;
+}
+
+.demo-content-wrapper {
+  
+  display: flex;
+
+}
+
+.right-arrow {
+
+  transform: rotate(-180deg);
+}
