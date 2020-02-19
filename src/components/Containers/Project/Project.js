@@ -50,7 +50,7 @@ class Project extends Component {
 
   renderTechnologies = () => {
     let project = this.readProject()
-    if (project) {
+    if (project && project.technologies) {
       return project.technologies.map((t, i) => {
         let image = {
           link: t,
