@@ -1,15 +1,15 @@
 export const professionalProjects = [
   {
     title: 'ODIN 3',
-    mainCaption: 'ODIN is a next generation CRM system designed for the hospitality industry. It integrates with various services such as Slack, Stripe, Sevenrooms, SilverwarePOS and Mailgun to allow venues to cater amazing experiences for their valued guests. It can take care of everything from recognizing repeat customers, marketing campaigns to charging credit cards',
+    mainCaption: 'ODIN is a next generation CRM system designed for the hospitality industry. It integrates with various services to enable venues to create amazing experiences for their guests. It can take care of everything from recognizing repeat customers, marketing to payment processing',
     heroAsset: 'https://shashike-portfolio-site-assets.s3.amazonaws.com/render1.png',
     heroAssetType: 'image',
     features: [
-      'Facial Recognition for learned faces, allows to recognize guests and allow users to login quickly.',
+      'Facial Recognition identifies familiar faces and enables venues to recognize frequent guests. It also allows staff to login quickly.',
       'Powerful analytics for generating audiences for marketing purposes',
-      'Slack notifications for guest events, such as check in, seated at table and repeat visit',
+      'Slack notifications for guest events ranging from checked in, table assigned to repeat visit',
       'Reporting system for measuring labour performance',
-      'Billing system with ticket sales and recurring billing',
+      'Billing system for handling event ticket sales and recurring billing',
       'Drip-campaign feature for automatic recurring outreach (ie: for reviews)'
     ],
     implementation: [
@@ -36,7 +36,7 @@ export const professionalProjects = [
      },
      {
       link: 'https://shashike-portfolio-site-assets.s3.amazonaws.com/odin-profile.mov',
-      caption: "The ODIN profile tracks a guests information including their contact details, events they have attended, visitors they have brought in and their full message history",
+      caption: "The ODIN profile tracks a guests information including their contact details, events they have attended, visitors they have brought in and their full text message history",
       type: 'video'
      },
      {
@@ -62,7 +62,7 @@ export const professionalProjects = [
      },
      {
       link: 'https://shashike-portfolio-site-assets.s3.amazonaws.com/labour-panel-desktop.png',
-      caption: "Seamlessly assign user roles and permissions so data stays compartmentalized",
+      caption: "Seamlessly assign user roles and permissions so data stays secure and compartmentalized",
       type: 'image'
      },
      {
@@ -74,13 +74,14 @@ export const professionalProjects = [
   },
   {
     title: 'ECHO 3',
-    mainCaption: 'ECHO is a fast text messaging middleware that can integrate with a given CRM system (currently the text messaging handmaiden of ODIN).',
+    mainCaption: 'ECHO is a fast text messaging service that can integrate with a given CRM system',
     heroAsset: 'https://shashike-portfolio-site-assets.s3.amazonaws.com/echo-messages-desktop-2.png',
     heroAssetType: 'image',
     features: [
-      'Platform agnostic: just expose a queryable endpoint for retrieving phone numbers so when messages are recieved conversations are automatically initialized within ECHO',
+      'Platform agnostic: just expose a queryable endpoint for retrieving customers by phone number.',
+      'When messages are recieved conversations are automatically initialized within ECHO',
       'Low latency',
-      'Live stream messages to the single page application',
+      'Live interface shows messages as they come in',
       'Emoji support',
       'Slack integration: recieve and respond to incoming text messages via Slack',
       'Ability to track metrics such as average response time'
@@ -124,7 +125,7 @@ export const professionalProjects = [
   },
   {
     title: 'OVERSEER',
-    mainCaption: "OVERSEER is a native application for leveraging ODIN's powerful facial recognition features by detecting faces in videos and uploading them to the ODIN API for processing.",
+    mainCaption: "OVERSEER is a native application for leveraging ODIN's powerful facial recognition features. It can detect faces in videos and upload them to ODIN for processing.",
     heroAsset: 'https://shashike-portfolio-site-assets.s3.amazonaws.com/overseer-search-desktop.png',
     heroAssetType: 'image',
     features: [
