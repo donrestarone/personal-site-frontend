@@ -13,26 +13,26 @@ class ImageContainer extends Component {
   }
 
   renderImageContext = () => {
-    let loadedStyle = {
-      display: this.state.loaded ? 'block' : 'none'
-    }
     let loadingStyle = {
       display: !this.state.loaded ? 'block' : 'none'
     }
-
-    return (
-      <>
-      <Spinner loadingStyle={loadingStyle}></Spinner>
-      <div style={loadedStyle}>
-        <img onLoad={ this.handleLoad } src={this.props.image.link} className={this.props.image.className}></img>
-      </div>
-      </>
-    )
+    if (this.state.loaded) {
+      return (
+        <img src={this.props.image.link} className={this.props.image.className}></img>
+      )
+    } else {
+      return (
+        <Spinner loadingStyle={loadingStyle}></Spinner>
+      )
+    }
   }
 
   render() {
     return (
-      this.renderImageContext()
+      <>
+        <img style={{display: 'none'}} onLoad={ this.handleLoad } src={this.props.image.link} className={this.props.image.className}></img>
+        {this.renderImageContext()}
+      </>
     );
   }
 }

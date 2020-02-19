@@ -71,13 +71,13 @@ class Project extends Component {
 
   incrementMediaListIndex = () => {
     this.setState((prevState) => ({
-      currentIndex: prevState.mediaListMaxIndex >= prevState.currentIndex + 1 ? prevState.currentIndex + 1 : prevState.mediaListMaxIndex
+      currentIndex: prevState.mediaListMaxIndex >= prevState.currentIndex + 1 ? prevState.currentIndex + 1 : 0
     }))
   }
 
   decrementMediaListIndex = () => {
     this.setState((prevState) => ({
-      currentIndex: prevState.currentIndex - 1 === -1 ? 0 : prevState.currentIndex - 1
+      currentIndex: prevState.currentIndex - 1 === -1 ? this.state.mediaListMaxIndex : prevState.currentIndex - 1
     }))
   }
 

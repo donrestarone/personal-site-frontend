@@ -5,9 +5,9 @@ import arrow from '../../../assets/back-button.png'
 import VideoContainer from '../VideoContainer/VideoContainer'
 
 const DemoContainer = (props) => {
+  let media = props.media ? props.media[props.index] : null
   const renderContent = () => {
-    if (props.media) {
-      let media = props.media[props.index]
+    if (media) {
       if (media.type === 'image') {
         let image = {
           ...media,
@@ -31,6 +31,7 @@ const DemoContainer = (props) => {
         {renderContent()}
         <img onClick={props.next} src={arrow} className="demo-container-controls right-arrow"></img>
       </div>
+      <p>{media ? media.caption : null}</p>
     </div>
   )
 }
