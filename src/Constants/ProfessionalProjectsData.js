@@ -19,6 +19,13 @@ export const professionalProjects = [
       'Billing system is powered by Stripe',
       'Slack bot is used for routing notifications',
     ],
+    technologies: [
+      'https://shashike-portfolio-site-assets.s3.amazonaws.com/postgresql.png',
+      'https://shashike-portfolio-site-assets.s3.amazonaws.com/stripe.png',
+      'https://shashike-portfolio-site-assets.s3.amazonaws.com/redis.png',
+      'https://shashike-portfolio-site-assets.s3.amazonaws.com/react.png',
+      'https://shashike-portfolio-site-assets.s3.amazonaws.com/rails-red-logo.png'
+    ],
     path: '/professional-projects/odin',
     id: 'odin',
     media: [
@@ -84,6 +91,12 @@ export const professionalProjects = [
       'ODIN Oauth for authentication',
       'Slack bot for routing messages/notifications',
     ],
+    technologies: [
+      'https://shashike-portfolio-site-assets.s3.amazonaws.com/react.png',
+      'https://shashike-portfolio-site-assets.s3.amazonaws.com/slack-logo.png',
+      'https://shashike-portfolio-site-assets.s3.amazonaws.com/redis.png',
+      'https://shashike-portfolio-site-assets.s3.amazonaws.com/rails-red-logo.png'
+    ],
     path: '/professional-projects/echo',
     id: 'echo',
     media: [
@@ -125,6 +138,10 @@ export const professionalProjects = [
       'WebRTC API for media capture',
       'ODIN Oauth for authentication',
     ],
+    technologies: [
+      'https://shashike-portfolio-site-assets.s3.amazonaws.com/electron-logo.svg',
+      'https://shashike-portfolio-site-assets.s3.amazonaws.com/webrtc.png'
+    ],
     path: '/professional-projects/overseer',
     id: 'overseer',
     media: [
@@ -157,6 +174,9 @@ export const professionalProjects = [
       'React.js',
       'Amazon Web Services',
       'Godaddy DNS',
+    ],
+    technologies: [
+      'https://shashike-portfolio-site-assets.s3.amazonaws.com/react.png',
     ],
     path: '/professional-projects/sanjay-singhal',
     id: 'sanjay-singhal',
