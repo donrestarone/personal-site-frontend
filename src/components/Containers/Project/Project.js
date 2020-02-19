@@ -18,6 +18,7 @@ class Project extends Component {
 
   componentDidMount = () => {
     this.setProjectState()
+    window.scrollTo(0, 0)
   }
 
   readProject = () => {

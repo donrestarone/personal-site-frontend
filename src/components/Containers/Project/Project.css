@@ -25,10 +25,7 @@
   color: #FFA69E;
 }
 
-.project-features-technologies-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-}
+
 
 .project-technology-image {
   width: auto;
@@ -54,6 +51,11 @@
     font-size: 26px;
   }
 
+  .project-features-technologies-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
   .project-features-list {
     padding: 10px;
   }
@@ -75,5 +77,35 @@
 
 @media only screen and (max-width: 500px) {
   /* mobile */
+  .professional-projects-back-button {
+    max-height: 40px;
+    padding: 0 0 0 15px;
+  }
 
+  .project-features-heading {
+    font-size: 20px;
+  }
+
+  .project-heading {
+    font-size: 35px;
+    margin-left: 8px;
+  }
+
+  .project-features-wrapper {
+    padding: 0 0 0 15px;
+  }
+
+  .project-technology-image {
+    height: 35px;
+    margin: 0 5px 0 5px;
+  }
+
+  .project-features-technologies-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .project-features-list {
+    padding: 10px 30px 10px 30px;
+  }
 }

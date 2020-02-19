@@ -31,7 +31,7 @@ const DemoContainer = (props) => {
         {renderContent()}
         <img onClick={props.next} src={arrow} className="demo-container-controls right-arrow"></img>
       </div>
-      <p>{media ? media.caption : null}</p>
+      <p className="demo-container-caption">{media ? media.caption : null}</p>
     </div>
   )
 }
