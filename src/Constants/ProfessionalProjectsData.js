@@ -73,6 +73,55 @@ export const professionalProjects = [
     ]
   },
   {
+    title: 'Marked Restaurant',
+    mainCaption: "This tasteful website was built for Toronto premier grill-house, Marked. Its responsive design not only changes based on screen size, but also orientation.",
+    heroAsset: 'https://shashike-portfolio-site-assets.s3.amazonaws.com/desktop-marked.png',
+    heroAssetType: 'image',
+    hasLiveSite: true, 
+    liveSite: 'https://www.markedrestaurant.com',
+    features: [
+      "Single page application",
+      "The site's design changes based on device orientation"
+    ],
+    implementation: [
+      'Front-end: SPA (Single Page Application) built with React.js',
+      "Assets hosted on AWS S3",
+      "Custom CSS",
+    ],
+    technologies: [
+      'https://shashike-portfolio-site-assets.s3.amazonaws.com/react.png',
+    ],
+    path: '/professional-projects/marked',
+    id: 'marked',
+    media: [
+     {
+      link: 'https://shashike-portfolio-site-assets.s3.amazonaws.com/desktop-marked.png',
+      caption: 'This is the view presented to desktop users',
+      type: 'image'
+     },
+     {
+      link: 'https://shashike-portfolio-site-assets.s3.amazonaws.com/tablet-landscape-marked.png',
+      caption: 'This view is shown to tablet users if their device is in landscape mode',
+      type: 'image'
+     },
+     {
+      link: 'https://shashike-portfolio-site-assets.s3.amazonaws.com/tablet-portrait-marked.png',
+      caption: 'This view is shown to tablet users if their device is in portrait mode',
+      type: 'image'
+     },
+     {
+      link: 'https://shashike-portfolio-site-assets.s3.amazonaws.com/mobile-portrait-marked.png',
+      caption: 'This view is shown to mobile users if their device is in portrait mode',
+      type: 'image'
+     },
+     {
+      link: 'https://shashike-portfolio-site-assets.s3.amazonaws.com/mobile-landscape-marked.png',
+      caption: 'This view is shown to mobile users if their device is in landscape mode',
+      type: 'image'
+     },
+    ]
+  },
+  {
     title: 'ECHO 3',
     mainCaption: 'ECHO is a fast text messaging service that can integrate with a given CRM system',
     heroAsset: 'https://shashike-portfolio-site-assets.s3.amazonaws.com/echo-messages-desktop-2.png',
