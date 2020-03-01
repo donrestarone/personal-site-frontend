@@ -22,7 +22,7 @@
   }
   
   .slick-dots > li {
-    filter: invert(1)
+    filter: invert(1) !important;
   }
   
   .slick-slider {
