@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import {isMobile} from 'react-device-detect'
 
 class VideoContainer extends Component {
   render() {
