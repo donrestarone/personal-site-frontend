@@ -93,7 +93,7 @@ class Project extends Component {
       display: 'block'
     }
     return (
-    <div className="show-professional-project-wrapper animated fadeIn">
+    <div className="animated fadeIn">
       <div className="project-heading-wrapper">
         <Link to={link} className="professional-projects-back-button-wrapper">
           <img src={backButton} className="professional-projects-back-button">
