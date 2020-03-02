@@ -70,28 +70,8 @@ class Project extends Component {
     }
   }
 
-  incrementMediaListIndex = () => {
-    this.setState((prevState) => ({
-      currentIndex: prevState.mediaListMaxIndex >= prevState.currentIndex + 1 ? prevState.currentIndex + 1 : 0
-    }))
-  }
-
-  decrementMediaListIndex = () => {
-    this.setState((prevState) => ({
-      currentIndex: prevState.currentIndex - 1 === -1 ? this.state.mediaListMaxIndex : prevState.currentIndex - 1
-    }))
-  }
-
-
   render() {
     let link = this.props.location.state.fallback
-    let backButtonStyle = {
-      background: `url(${backButton}) no-repeat center`,
-      backgroundSize: '300px',
-      width: '50%',
-      height: '50%',
-      display: 'block'
-    }
     return (
     <div className="animated fadeIn">
       <div className="project-heading-wrapper">
@@ -118,7 +98,7 @@ class Project extends Component {
           </ul>
         </div>
       </div>
-      <DemoContainer previous={this.decrementMediaListIndex} next={this.incrementMediaListIndex} media={this.state.project ? this.state.project.media : null} index={this.state.currentIndex}></DemoContainer>
+      <DemoContainer media={this.state.project ? this.state.project.media : null} index={this.state.currentIndex}></DemoContainer>
     </div>
     );
   }

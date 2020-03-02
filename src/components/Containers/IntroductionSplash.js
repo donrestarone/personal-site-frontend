@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Jumbotron from '../Jumbotron/Jumbotron'
 import {characteristics, styles} from '../../Constants/JumbotronData'
+let timer 
 class IntroductionSplash extends Component {
   state = {
     currentWord: [],
@@ -10,7 +11,7 @@ class IntroductionSplash extends Component {
 
   wordArrayIterator = () => {
     let  i = 0
-    let timer = setInterval(() => {
+    timer = setInterval(() => {
       this.setState({currentWord: characteristics[i], style: styles[i]}, () => {
         i++
       })
@@ -30,6 +31,10 @@ class IntroductionSplash extends Component {
   }
   componentDidMount = () => {
     this.wordArrayIterator()
+  }
+
+  componentWillUnmount = () => {
+    clearTimeout(timer)
   }
 
   render() {

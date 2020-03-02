@@ -5,7 +5,6 @@ import './MediaContentWrapper.css'
 
 const MediaContentWrapper = (props) => {
   let media = props.media
-  console.log(media)
   const renderContent = () => {
     
     if (media.type === 'image') {

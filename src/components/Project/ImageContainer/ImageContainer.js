@@ -7,8 +7,12 @@ class ImageContainer extends Component {
   }
 
   handleLoad = () => {
-    this.setState({
-      loaded: true
+    this.setState((prevState) => {
+      if (!prevState.loaded) {
+        return {
+          loaded: true
+        }
+      }
     })
   }
 
