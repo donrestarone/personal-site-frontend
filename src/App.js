@@ -17,7 +17,7 @@ import ContactModal from './components/Containers/ContactModal/ContactModal'
 import Blog from './components/Containers/Blog/Blog'
 import AboutMe from './components/Containers/AboutMe/AboutMe'
 import Projects from './components/Containers/Projects/Projects'
-
+let timer
 class App extends Component {
   state = {
     ipAddress: null,
@@ -61,6 +61,10 @@ class App extends Component {
   
   componentDidMount = () => {
     this.initializeUserDetails()
+  }
+
+  componentWillUnmount = () => {
+    clearTimeout(timer)
   }
 
   componentDidUpdate = () => {
@@ -119,8 +123,10 @@ class App extends Component {
 
   timeOutAnimation = () => {
     // set how long we show the splash screen
-    setTimeout(() => {
-      this.setState({showSplash: false})
+    timer = setTimeout(() => {
+      if (this.state.showSplash) {
+        this.setState({showSplash: false})
+      }
     }, 4350);
   }
 
