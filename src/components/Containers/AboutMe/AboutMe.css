@@ -13,9 +13,38 @@
   color: #DCE0D9;
 }
 
-.about-me-heading{
+.about-me-heading, .about-me-retainable-wrapper-heading {
   color: #80a1c1;
 }
+
+
+/* style overrides for RTB/medium feed */
+
+.rtb-col > div >  a > h2 {
+  font-family: 'Oswald', sans-serif;
+  color: #DCE0D9;
+}
+
+.rtb-col > div >  a {
+  text-decoration: none;
+}
+
+.medium-feed-link > a {
+  display: none;
+  text-decoration: none;
+  font-family: 'Oswald', sans-serif;
+  color: #DCE0D9;
+}
+
+.author {
+  display: none;
+}
+
+.read-more {
+  display: none;
+}
+
+/* style overrides for RTB/medium feed END */
 
 @media only screen and (min-width: 501px) {
   /* desktop */
@@ -56,6 +85,15 @@
     margin: 0 20px;
     font-size: 18px;
   }
+
+  .about-me-retainable-wrapper {
+    padding: 60px 30px;
+  }
+
+  .about-me-retainable-wrapper-heading {
+    text-align: center;
+    padding: 20px;
+  }
 }
 
 @media only screen and (max-width: 500px) {
@@ -91,5 +129,15 @@
   .about-me-link {
     margin: 0 10px;
     font-size: 16px;
+  }
+
+
+  .about-me-retainable-wrapper {
+    padding: 10px 15px;
+  }
+
+  .about-me-retainable-wrapper-heading {
+    text-align: center;
+    padding: 10px;
   }
 }

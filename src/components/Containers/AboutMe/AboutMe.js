@@ -1,7 +1,22 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import './AboutMe.css'
 import ProfileImageDesktop from '../../../assets/profile-image-desktop.png'
 const AboutMe = (props) => {
+  const injectMediumFeedScript = () => {
+    let script = document.createElement('script');
+    script.src = "https://www.retainable.io/assets/retainable/rss-embed/retainable-rss-embed.js";
+    script.async = true;
+    document.body.appendChild(script);
+    return script
+  }
+  let script = injectMediumFeedScript()
+  useEffect(() => {
+    injectMediumFeedScript()
+    return () => {
+      document.body.removeChild(script);
+    }
+  }, []);
+
   return (
     <div className="about-me-content-wrapper animated zoomIn">
       <div className="about-me-wrapper">
@@ -23,6 +38,21 @@ const AboutMe = (props) => {
           <a className="about-me-link" target="_blank" href="https://github.com/donrestarone">Github</a>
           <span className="about-me-link">shashikejayatunge@gmail.com</span>
           <a className="about-me-link" target="_blank" href="https://www.linkedin.com/in/shashike-jayatunge/">LinkedIn</a>
+        </div>
+        <div className="about-me-retainable-wrapper">
+          <h1 className="about-me-retainable-wrapper-heading">Medium Publications</h1>
+          <div id="retainable-rss-embed" 
+            data-rss="
+            https://medium.com/feed/@shashikejayatunge,
+            "
+            data-maxcols="3" 
+            data-layout="grid" 
+            data-poststyle="external" 
+            data-readmore="Read the rest" 
+            data-buttonclass="" 
+            data-offset="-100"
+            >
+          </div>
         </div>
     </div>
   )
